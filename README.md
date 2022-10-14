@@ -9,4 +9,4 @@ https://gonzalo-barra.github.io/test-frontend/
 
 Autor
 =========
-[Gonzalo Barra](http://a.com](https://github.com/Gonzalo-Barra)
+[Gonzalo Barra](https://github.com/Gonzalo-Barra)
