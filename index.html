@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+
+  <!-- SweetAlert2 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css" />
+</head>
+
+<body class="container">
+  <div class="content">
+    <div class="background">
+      <header class="title-container">
+        <h1>Contáctanos</h1>
+
+        <i class="material-icons custom-icon">clear</i>
+      </header>
+
+      <main class="form row">
+        <form class="form__input col s12 m12 l7" action="#">
+          <div class="input-field row">
+            <input id="nombre" type="text" required />
+            <label for="nombre">Nombre</label>
+          </div>
+
+          <div class="input-field row">
+            <input id="apellido" type="text" required />
+            <label for="apellido">Apellido</label>
+          </div>
+
+          <div class="input-field row">
+            <input id="email" type="email" required />
+            <label for="email">Email</label>
+          </div>
+
+          <div class="input-field row">
+            <input id="telefono" type="number" required />
+            <label for="telefono">Teléfono(+519...)</label>
+          </div>
+
+          <div class="input-field row">
+            <input id="ruc" type="number" required />
+            <label for="ruc">RUC</label>
+          </div>
+
+          <div class="row checkbox">
+            <label>
+              <input type="checkbox" class="filled-in" />
+              <span>Aceptar<span class="checkbox-underline">términos y condiciones</span></span>
+            </label>
+          </div>
+
+          <div class="button row">
+            <a class="waves-effect waves-light btn" id="submitbutton">Contáctanos</a>
+          </div>
+        </form>
+
+        <div class="imagen col l5">
+          <img src="./assets/img/llave.png" alt="imagen-llaves-auto" />
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
