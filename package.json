@@ -1,0 +1,15 @@
+{
+    "name": "prueba-front-end",
+    "version": "1.0.0",
+    "description": "Prueba para cargo Front-end Junior",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "author": "Gonzalo Barra",
+    "license": "MIT",
+    "dependencies": {
+      "dependencia1": "^1.0.0",
+      "dependencia2": "^2.0.0"
+    }
+  }
