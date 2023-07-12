@@ -9,7 +9,5 @@
     "author": "Gonzalo Barra",
     "license": "MIT",
     "dependencies": {
-      "dependencia1": "^1.0.0",
-      "dependencia2": "^2.0.0"
     }
   }
