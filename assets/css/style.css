@@ -214,6 +214,22 @@ input[type="number"] + label,
   padding-left: 30px;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"]::-moz-number-spin-box {
+  -moz-appearance: none;
+  margin: 0;
+}
+.no-spin {
+  appearance: textfield;
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+}
+
 .checkbox span {
   color: black;
   font-size: 12px;
