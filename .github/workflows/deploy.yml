@@ -7,21 +7,17 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    name: Deploy
 
-      - name: Descargar artefacto
-        uses: actions/download-artifact@v2
-        with:
-          name: work
-          path: ./work
+    steps:
+      - uses: actions/checkout@master
 
       - name: Copiar archivos a la vps 
-        uses: appleboy/scp-action@v2  
+        uses: nogsantos/scp-deploy@master
         with:
+          src: ./dist/*
           host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key:  ${{ secrets.SSH_PRIVATE_KEY }}
-          source: ./work/*
-          target: /home/gonzalo/
+          remote: ${{ secrets.REMOTE }}
+          port: ${{ secrets.PORT }}
+          user: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
