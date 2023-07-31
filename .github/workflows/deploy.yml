@@ -1,0 +1,27 @@
+name: Deploy to vps
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Descargar artefacto
+        uses: actions/download-artifact@v2
+        with:
+          name: work
+          path: ./work
+
+      - name: Copiar archivos a la vps 
+        uses: appleboy/scp-action@v2  
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key:  ${{ secrets.SSH_PRIVATE_KEY }}
+          source: ./work/*
+          target: /home/gonzalo/
