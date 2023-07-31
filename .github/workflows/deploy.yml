@@ -16,3 +16,4 @@ jobs:
           host: ${{ env.REMOTE_HOST }}
           user: ${{ env.REMOTE_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          destination: /home/gonzalo/
