@@ -10,14 +10,9 @@ jobs:
     name: Deploy
 
     steps:
-      - uses: actions/checkout@master
-
-      - name: Copiar archivos a la vps 
-        uses: nogsantos/scp-deploy@master
+      - uses: actions/checkout@v2
+      - uses: a-was/scp-action@v1
         with:
-          src: ./dist/*
-          host: ${{ secrets.HOST }}
-          remote: ${{ secrets.REMOTE }}
-          port: ${{ secrets.PORT }}
-          user: ${{ secrets.USERNAME }}
+          host: ${{ env.REMOTE_HOST }}
+          user: ${{ env.REMOTE_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
