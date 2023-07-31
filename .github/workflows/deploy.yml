@@ -14,6 +14,8 @@ jobs:
       - uses: a-was/scp-action@v1
         with:
           host: ${{ env.REMOTE_HOST }}
+          port: 22
           user: ${{ env.REMOTE_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: 'dist/*'
           destination: /home/gonzalo/
